@@ -3,8 +3,11 @@
 Bus Ticket Booking System with
 
 •	JavaFX
+
 •	MySQL
+
 •	Scene Builder
+
 
 Users Can:
 
