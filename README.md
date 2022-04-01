@@ -1,20 +1,22 @@
 # JavaFX-Bus-Ticket-Booking-System
 
-Bus Ticket Booking System with-\
-•	JavaFX\
-•	MySQL\
+Bus Ticket Booking System with
+
+•	JavaFX
+•	MySQL
 •	Scene Builder
 
-Users Can:\
-*	Login and Signup\
-*	Search bus\
-*	Select bus, see available and book seats, select seats\
-*	Pay by two payment methods\
+Users Can:
+
+*	Login and Signup
+*	Search bus
+*	Select bus, see available and book seats, select seats
+*	Pay by two payment methods
 *	View current bookings
 
 
-Admin Can:\
-*	Add new bus\
+Admin Can:
+*	Add new bus
 *	View Booking History
 
 YouTube: https://youtu.be/-iPe0J2WCXY
