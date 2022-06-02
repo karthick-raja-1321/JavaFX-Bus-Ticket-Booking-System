@@ -27,6 +27,9 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
+CREATE DATABASE IF NOT EXISTS bus;
+USE bus;
+
 CREATE TABLE `admin` (
   `username` varchar(45) NOT NULL,
   `password` varchar(45) DEFAULT NULL

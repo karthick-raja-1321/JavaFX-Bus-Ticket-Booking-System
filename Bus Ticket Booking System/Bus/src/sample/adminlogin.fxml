@@ -35,12 +35,12 @@
             <Hyperlink fx:id="back" layoutX="592.0" layoutY="25.0" onAction="#back" styleClass="darkblue1" stylesheets="@styleSample.css" text="Back" />
             <ImageView fitHeight="28.0" fitWidth="29.0" layoutX="204.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@icons8-user-80.png" />
+                  <Image url="@../img/icons8-user-80.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="28.0" fitWidth="29.0" layoutX="204.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@icons8-password-96.png" />
+                  <Image url="@../img/icons8-password-96.png" />
                </image>
             </ImageView>
             </children>

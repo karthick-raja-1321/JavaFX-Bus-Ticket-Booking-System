@@ -35,17 +35,11 @@ public class Controller extends Thread implements Initializable {
     ResultSet resultSet = null;
     PreparedStatement pst = null;
 
-
-
-
-
-
-
     public void button(ActionEvent actionEvent) {
 
         String username = textField.getText();
         String pass = passwordField.getText();
-        if ( username.equals("") && pass.equals("")) {
+        if (username.equals("") && pass.equals("")) {
             Alert a = new Alert(Alert.AlertType.NONE);
             a.setAlertType(Alert.AlertType.ERROR);
             a.setContentText("Invalid username or password");
@@ -61,16 +55,12 @@ public class Controller extends Thread implements Initializable {
                 resultSet = pst.executeQuery();
                 if (resultSet.next()) {
 
-
                     Parent parent = FXMLLoader.load(getClass().getResource("book.fxml"));
                     Scene scene = new Scene(parent);
-                    Stage window = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+                    Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                     window.setScene(scene);
                     window.show();
                     window.setMaximized(false);
-
-
-
 
                 } else {
                     Alert alert = new Alert(Alert.AlertType.NONE);
@@ -85,9 +75,6 @@ public class Controller extends Thread implements Initializable {
             }
         }
 
-
-
-
     }
 
     @Override
@@ -95,13 +82,13 @@ public class Controller extends Thread implements Initializable {
 
     }
 
-    public void signup(ActionEvent actionEvent)  {
+    public void signup(ActionEvent actionEvent) {
 
         ;
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("signup.fxml"));
             Scene scene = new Scene(parent);
-            Stage window = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             window.setScene(scene);
             window.show();
         } catch (IOException e) {
@@ -115,14 +102,12 @@ public class Controller extends Thread implements Initializable {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("adminlogin.fxml"));
             Scene scene = new Scene(parent);
-            Stage window = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             window.setScene(scene);
             window.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-
     }
 }
-

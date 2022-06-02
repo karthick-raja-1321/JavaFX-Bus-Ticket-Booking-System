@@ -1,10 +1,8 @@
 package sample;
 
-
 import java.sql.Time;
 
 public class Service {
-
 
     private String service;
     private String source;
@@ -12,8 +10,8 @@ public class Service {
     private Integer fare;
     private Time dtime;
     private Time atime;
-   private Integer seats;
-   private String dt;
+    private Integer seats;
+    private String dt;
 
     public String getService() {
         return service;
@@ -71,16 +69,15 @@ public class Service {
         this.seats = seats;
     }
 
-
     public String getDt() {
         return dt;
     }
 
-    public void setDt(String  dt) {
+    public void setDt(String dt) {
         this.dt = dt;
     }
 
-    public Service(String service, String source, String destination, Integer fare, Time dtime, Time atime,String dt) {
+    public Service(String service, String source, String destination, Integer fare, Time dtime, Time atime, String dt) {
         this.service = service;
         this.source = source;
         this.destination = destination;

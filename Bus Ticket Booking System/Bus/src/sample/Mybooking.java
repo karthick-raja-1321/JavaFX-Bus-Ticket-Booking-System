@@ -16,13 +16,12 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import sample.connectivity.ConnectionClass;
 
-
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
-public class Mybooking implements Initializable{
+public class Mybooking implements Initializable {
 
     @FXML
     private TableColumn<?, ?> amount;
@@ -57,17 +56,14 @@ public class Mybooking implements Initializable{
     @FXML
     private TableView<ViewBookings_user> table;
 
-
-
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initCol();
         load();
 
     }
-    private void initCol(){
+
+    private void initCol() {
         name.setCellValueFactory(new PropertyValueFactory<>("name"));
         phone.setCellValueFactory(new PropertyValueFactory<>("phone"));
         source.setCellValueFactory(new PropertyValueFactory<>("source"));
@@ -77,15 +73,17 @@ public class Mybooking implements Initializable{
         seats.setCellValueFactory(new PropertyValueFactory<>("seats"));
         amount.setCellValueFactory(new PropertyValueFactory<>("amount"));
     }
-    private void load(){
+
+    private void load() {
         ObservableList<ViewBookings_user> list12 = FXCollections.observableArrayList();
         ConnectionClass connectionClass = new ConnectionClass();
         Connection connection = connectionClass.getConnection();
         PreparedStatement pst;
         try {
-            pst=connection.prepareStatement("select s.service,sum(st.count),date,s.source,s.dest,s.dtime,s.atime,st.uname from search s inner join seats st on s.service=st.service where count = 1 GROUP by s.service");
+            pst = connection.prepareStatement(
+                    "select s.service,sum(st.count),date,s.source,s.dest,s.dtime,s.atime,st.uname from search s inner join seats st on s.service=st.service where count = 1 GROUP by s.service");
             ResultSet resultSet = pst.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 list12.add(new ViewBookings_user(resultSet.getString(1),
                         resultSet.getString(2),
                         resultSet.getString(3),
@@ -106,17 +104,15 @@ public class Mybooking implements Initializable{
     void back_(ActionEvent event) {
         try {
 
-
             Parent parent = FXMLLoader.load(getClass().getResource("book.fxml"));
             Scene scene = new Scene(parent);
-            Stage window = (Stage)((Node) event.getSource()).getScene().getWindow();
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(scene);
             window.show();
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 
     }
 
@@ -126,7 +122,7 @@ public class Mybooking implements Initializable{
         try {
             parent = FXMLLoader.load(getClass().getResource("sample.fxml"));
             Scene scene = new Scene(parent);
-            Stage window = (Stage)((Node) event.getSource()).getScene().getWindow();
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(scene);
             window.show();
         } catch (IOException e) {

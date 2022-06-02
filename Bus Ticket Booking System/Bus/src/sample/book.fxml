@@ -337,7 +337,7 @@
             </Label>
             <ImageView fitHeight="77.0" fitWidth="77.0" layoutX="185.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@giphy.gif" />
+                  <Image url="@../img/giphy.gif" />
                </image>
             </ImageView>
          </children>

@@ -43,14 +43,15 @@ public class Adminlogin implements Initializable {
             try {
                 ConnectionClass connectionClass = new ConnectionClass();
                 Connection connection = connectionClass.getConnection();
-                PreparedStatement pst = connection.prepareStatement("select * from admin where username=? and password=?");
+                PreparedStatement pst = connection
+                        .prepareStatement("select * from admin where username=? and password=?");
                 pst.setString(1, uname);
                 pst.setString(2, pwd);
                 ResultSet resultSet = pst.executeQuery();
                 if (resultSet.next()) {
                     Parent parent = FXMLLoader.load(getClass().getResource("admin.fxml"));
                     Scene scene = new Scene(parent);
-                    Stage window = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+                    Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                     window.setScene(scene);
                     window.show();
                 }
@@ -65,10 +66,9 @@ public class Adminlogin implements Initializable {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("sample.fxml"));
             Scene scene = new Scene(parent);
-            Stage window = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             window.setScene(scene);
             window.show();
-
 
         } catch (IOException e) {
             e.printStackTrace();

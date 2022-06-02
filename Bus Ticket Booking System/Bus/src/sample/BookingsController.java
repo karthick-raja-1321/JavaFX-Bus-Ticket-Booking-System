@@ -18,39 +18,36 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import sample.connectivity.ConnectionClass;
 
-
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
-public class BookingsController  implements Initializable {
+public class BookingsController implements Initializable {
     @FXML
-    private TableView <ViewBookings> table;
+    private TableView<ViewBookings> table;
     @FXML
-    private TableColumn <ViewBookings, String> name;
+    private TableColumn<ViewBookings, String> name;
     @FXML
-    public TableColumn<ViewBookings,Integer> phone;
+    public TableColumn<ViewBookings, Integer> phone;
     @FXML
-    public TableColumn <ViewBookings,String>source;
+    public TableColumn<ViewBookings, String> source;
     @FXML
-    public TableColumn<ViewBookings,String> destination;
+    public TableColumn<ViewBookings, String> destination;
     @FXML
-    public TableColumn <ViewBookings,String>service;
+    public TableColumn<ViewBookings, String> service;
     @FXML
-    public TableColumn <ViewBookings, Time>depart;
+    public TableColumn<ViewBookings, Time> depart;
     @FXML
-    public TableColumn <ViewBookings,Time> arrival;
+    public TableColumn<ViewBookings, Time> arrival;
     @FXML
-    public TableColumn <ViewBookings,String>date;
+    public TableColumn<ViewBookings, String> date;
     @FXML
-    public TableColumn <ViewBookings,Integer>seats;
+    public TableColumn<ViewBookings, Integer> seats;
     @FXML
-    public TableColumn <ViewBookings,Integer> amount;
+    public TableColumn<ViewBookings, Integer> amount;
     @FXML
     public Button back;
-
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -58,7 +55,8 @@ public class BookingsController  implements Initializable {
         load();
 
     }
-    private void initCol(){
+
+    private void initCol() {
         name.setCellValueFactory(new PropertyValueFactory<>("name"));
         phone.setCellValueFactory(new PropertyValueFactory<>("phone"));
         source.setCellValueFactory(new PropertyValueFactory<>("source"));
@@ -68,15 +66,16 @@ public class BookingsController  implements Initializable {
         seats.setCellValueFactory(new PropertyValueFactory<>("seats"));
         amount.setCellValueFactory(new PropertyValueFactory<>("amount"));
     }
-    private void load(){
+
+    private void load() {
         ObservableList<ViewBookings> list = FXCollections.observableArrayList();
         ConnectionClass connectionClass = new ConnectionClass();
         Connection connection = connectionClass.getConnection();
         PreparedStatement pst;
         try {
-            pst=connection.prepareStatement("select * from bookings");
+            pst = connection.prepareStatement("select * from bookings");
             ResultSet resultSet = pst.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 list.add(new ViewBookings(resultSet.getString(1),
                         resultSet.getString(2),
                         resultSet.getString(3),
@@ -98,7 +97,7 @@ public class BookingsController  implements Initializable {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("AddBus.fxml"));
             Scene scene = new Scene(parent);
-            Stage window = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             window.setScene(scene);
             window.show();
         } catch (IOException e) {
@@ -111,20 +110,20 @@ public class BookingsController  implements Initializable {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("admin.fxml"));
             Scene scene = new Scene(parent);
-            Stage window = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             window.setScene(scene);
             window.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    public void logout(ActionEvent actionEvent) {
 
+    public void logout(ActionEvent actionEvent) {
 
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("sample.fxml"));
             Scene scene = new Scene(parent);
-            Stage window = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             window.setScene(scene);
             window.show();
         } catch (IOException e) {

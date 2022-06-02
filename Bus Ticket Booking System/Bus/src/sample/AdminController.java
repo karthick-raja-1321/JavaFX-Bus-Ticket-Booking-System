@@ -25,30 +25,24 @@ public class AdminController implements Initializable {
     @FXML
     private Button buses;
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        
 
     }
 
     public void addbus(ActionEvent actionEvent) {
         addbus.setStyle("-fx-background-color:  #0598ff");
 
-
         Parent parent = null;
         try {
             parent = FXMLLoader.load(getClass().getResource("AddBus.fxml"));
             Scene scene = new Scene(parent);
-            Stage window = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             window.setScene(scene);
             window.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
 
     }
 
@@ -58,7 +52,7 @@ public class AdminController implements Initializable {
             try {
                 Parent parent = FXMLLoader.load(getClass().getResource("ViewBookings.fxml"));
                 Scene scene = new Scene(parent);
-                Stage window = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+                Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                 window.setScene(scene);
                 window.show();
             } catch (IOException e) {
@@ -71,9 +65,9 @@ public class AdminController implements Initializable {
     public void logout(ActionEvent actionEvent) {
 
         try {
-           Parent parent = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("sample.fxml"));
             Scene scene = new Scene(parent);
-            Stage window = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             window.setScene(scene);
             window.show();
         } catch (IOException e) {

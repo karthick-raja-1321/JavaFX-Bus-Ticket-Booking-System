@@ -1,6 +1,5 @@
 package sample.connectivity;
 import java.sql.*;
-
 public class ConnectionClass {
 public Connection connection;
     public Connection getConnection()
@@ -17,7 +16,7 @@ public Connection connection;
             throw new RuntimeException("Cannot connect to database", e);
         }
         catch(ClassNotFoundException e) {
-            System.out.println("Couldn't find Gum");
+            System.out.println("null");
         }
         return connection;
     }

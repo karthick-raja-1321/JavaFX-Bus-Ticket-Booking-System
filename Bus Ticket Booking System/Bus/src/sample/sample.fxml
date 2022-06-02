@@ -47,11 +47,11 @@
                </font></Button>
             <ImageView fitHeight="37.0" fitWidth="51.0" layoutX="146.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@icons8-user-80.png" />
+                  <Image url="@../img/icons8-user-80.png" />
                </image></ImageView>
             <ImageView fitHeight="28.0" fitWidth="54.0" layoutX="151.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@icons8-password-96.png" />
+                  <Image url="@../img/icons8-password-96.png" />
                </image>
             </ImageView>
 

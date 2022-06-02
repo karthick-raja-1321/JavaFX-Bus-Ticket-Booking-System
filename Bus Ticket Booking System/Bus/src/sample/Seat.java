@@ -3,9 +3,9 @@ package sample;
 public class Seat {
 
     private int seats;
-    private boolean booked =false;
+    private boolean booked = false;
 
-    public  int getSeats() {
+    public int getSeats() {
         return seats;
     }
 
@@ -21,11 +21,12 @@ public class Seat {
         this.booked = booked;
     }
 
-    public Seat(int seats, boolean booked){
-        this.seats=seats;
-        this.booked=booked;
+    public Seat(int seats, boolean booked) {
+        this.seats = seats;
+        this.booked = booked;
     }
-    public Seat(int seats){
-this(seats,false);
+
+    public Seat(int seats) {
+        this(seats, false);
     }
 }

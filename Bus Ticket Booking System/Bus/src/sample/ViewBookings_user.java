@@ -13,7 +13,6 @@ public class ViewBookings_user {
     private String seats;
     private String amount;
 
-
     public String getName() {
         return name;
     }
@@ -54,7 +53,6 @@ public class ViewBookings_user {
         this.service = service;
     }
 
-
     public String getDate() {
         return date;
     }
@@ -79,7 +77,8 @@ public class ViewBookings_user {
         this.amount = amount;
     }
 
-    public ViewBookings_user(String name, String phone, String source, String destination, String service, String date, String seats, String amount) {
+    public ViewBookings_user(String name, String phone, String source, String destination, String service, String date,
+            String seats, String amount) {
         this.name = name;
         this.phone = phone;
         this.source = source;
@@ -90,4 +89,3 @@ public class ViewBookings_user {
         this.amount = amount;
     }
 }
-

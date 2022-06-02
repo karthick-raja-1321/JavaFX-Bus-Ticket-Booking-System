@@ -4,15 +4,14 @@ import java.sql.Time;
 
 public class ViewBookings {
 
-        private String name;
-        private String phone;
-        private String source;
-        private String destination;
-        private String service;
-        private String date;
-        private Integer seats;
-        private String amount;
-
+    private String name;
+    private String phone;
+    private String source;
+    private String destination;
+    private String service;
+    private String date;
+    private Integer seats;
+    private String amount;
 
     public String getName() {
         return name;
@@ -54,7 +53,6 @@ public class ViewBookings {
         this.service = service;
     }
 
-
     public String getDate() {
         return date;
     }
@@ -79,7 +77,8 @@ public class ViewBookings {
         this.amount = amount;
     }
 
-    public ViewBookings(String name, String phone, String source, String destination, String service, String date, Integer seats, String amount) {
+    public ViewBookings(String name, String phone, String source, String destination, String service, String date,
+            Integer seats, String amount) {
         this.name = name;
         this.phone = phone;
         this.source = source;
@@ -90,4 +89,3 @@ public class ViewBookings {
         this.amount = amount;
     }
 }
-

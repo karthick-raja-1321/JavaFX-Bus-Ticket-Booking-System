@@ -1,25 +1,25 @@
 .bk{
-    -fx-background-image: url("photo.gif");
+    -fx-background-image: url("../img/photo.gif");
       -fx-background-size: cover;
       -fx-background-repeat: no-repeat;
       -fx-background-attachment: fixed;
 }
 .t2{
-    -fx-background-image: url("t2.jpg");
+    -fx-background-image: url("../img/t2.jpg");
       -fx-background-size: cover;
       -fx-background-repeat: no-repeat;
       -fx-background-attachment: fixed;
 }
 .table{
 
- -fx-background-image: url("table.png");
+ -fx-background-image: url("../img/table.png");
       -fx-background-size: cover;
       -fx-background-repeat: no-repeat;
       -fx-background-attachment: fixed;
 }
 .mercedes{
 
- -fx-background-image: url("mercedes.jpg");
+ -fx-background-image: url("../img/mercedes.jpg");
       -fx-background-size: cover;
       -fx-background-repeat: no-repeat;
       -fx-background-attachment: fixed;
@@ -27,21 +27,21 @@
 
 .road{
 
- -fx-background-image: url("road.jpg");
+ -fx-background-image: url("../img/road.jpg");
       -fx-background-size: cover;
       -fx-background-repeat: no-repeat;
       -fx-background-attachment: fixed;
 }
 .admin{
 
- -fx-background-image: url("1079304.jpg");
+ -fx-background-image: url("../img/1079304.jpg");
       -fx-background-size: cover;
       -fx-background-repeat: no-repeat;
       -fx-background-attachment: fixed;
 }
 .table1{
 
- -fx-background-image: url("1079304.jpg");
+ -fx-background-image: url("../img/1079304.jpg");
       -fx-background-size: cover;
       -fx-background-repeat: no-repeat;
       -fx-background-attachment: fixed;
