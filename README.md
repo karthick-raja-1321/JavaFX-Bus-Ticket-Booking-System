@@ -1,6 +1,8 @@
-# JavaFX-Bus-Ticket-Booking-System
+# Bus Ticket Booking System
 
-Bus Ticket Booking System with
+A JavaFX-based bus ticket booking system where users can search for available buses, book tickets, and pay for tickets. Admin manages buses and ticket sales.
+
+## Built with:
 
 •	JavaFX
 
@@ -8,17 +10,7 @@ Bus Ticket Booking System with
 
 •	Scene Builder
 
-## Features
-User:
-*	Login and Signup
-*	Search bus
-*	Select bus, see available and book seats, select seats
-*	Pay by two payment methods
-*	View current bookings
 
-Admin:
-*	Add new bus
-*	View Booking History
 
 
 Demo  : https://youtu.be/-iPe0J2WCXY
@@ -42,7 +34,7 @@ Demo  : https://youtu.be/-iPe0J2WCXY
 5. Then go to File -> Project Structure -> Libraries and add the JavaFX SDK as a library to the project. Point to the lib folder of the JavaFX SDK. Also add the MySQL connector jar file to the project.
 
 6. Add VM options.  click on Run -> Edit Configurations and add these VM options `--module-path "path to your javafx sdk lib folder eg. \path\to\javafx-sdk-17.0.1\lib" --add-modules javafx.controls,javafx.fxml`
-7. Run the application.
+7. Run the application (Main.java)
 
 For more details and other IDE options, please refer to [this site](https://openjfx.io/openjfx-docs/).
 
